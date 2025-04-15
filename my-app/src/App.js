@@ -4,6 +4,9 @@ import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 import Home from './pages/Home';
 import VideoPage from './pages/VideoPage';
 import OverviewPage from './pages/Overview';
+import QuickLinksPage from './pages/Quicklinks';
+import SOPsPage from './pages/SOPsPage';
+import FAQsPage from './pages/FAQsPage';
 
 const theme = createTheme({
   typography: {
@@ -50,6 +53,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/overview" element={<OverviewPage />} />
           <Route path="/video/:id" element={<VideoPage />} />
+          <Route path="/quicklinks" element={<QuickLinksPage />} />
+          <Route path="/sops" element={<SOPsPage />} />
+          <Route path="/faqs" element={<FAQsPage />} />
+
         </Routes>
       </div>
     </ThemeProvider>

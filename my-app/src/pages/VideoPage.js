@@ -43,9 +43,17 @@ const VideoPage = () => {
 
         {/* Navigation Buttons */}
         <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, justifyContent: 'space-between', mt: 4, gap: 2 }}>
+          {/* Previous Button */}
           <Button
             variant="contained"
-            onClick={() => video.id === 1 ? navigate('/overview') : navigate(`/video/${video.id - 1}`)}
+            disabled={video.id === 1} // Disable if it's the first video
+            onClick={() => {
+              if (video.id === 1) {
+                navigate('/overview'); // Navigate to overview if it's the first video
+              } else {
+                navigate(`/video/${video.id - 1}`); // Go to the previous video
+              }
+            }}
             sx={{
               flex: 1,
               height: '50px',
@@ -58,6 +66,7 @@ const VideoPage = () => {
             Previous
           </Button>
 
+          {/* Back to Overview Button */}
           <Box sx={{ display: 'flex', justifyContent: 'center', flex: 1 }}>
             <Button
               component={Link}
@@ -77,10 +86,16 @@ const VideoPage = () => {
             </Button>
           </Box>
 
+          {/* Next Button */}
           <Button
             variant="contained"
-            disabled={video.id === videoData.length}
-            onClick={() => navigate(`/video/${video.id + 1}`)}
+            onClick={() => {
+              if (video.id === videoData.length) {
+                navigate('/quicklinks'); // Navigate to /quicklinks if it's the last video
+              } else {
+                navigate(`/video/${video.id + 1}`); // Go to the next video
+              }
+            }}
             sx={{
               flex: 1,
               height: '50px',

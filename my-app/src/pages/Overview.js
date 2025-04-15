@@ -61,7 +61,7 @@ const Overview = () => {
         <ListItem
               key={1}
               button
-              onClick={() => navigate(`/video/1`)}
+              onClick={() => navigate(`/quicklinks`)}
               sx={{
                 borderBottom: '1px solid rgba(255,255,255,0.2)',
                 '&:hover': {
@@ -70,13 +70,50 @@ const Overview = () => {
               }}
             >
               <ListItemText
-                primary="Test"
-                secondary="Test2"
+                primary="Quick Links & Rescources"
+                secondary="This page will provide quick access to important links and helpful resources for easy navigation and support."
+                primaryTypographyProps={{ sx: { color: '#fff', fontWeight: 'bold' } }}
+                secondaryTypographyProps={{ sx: { color: '#ccc' } }}
+              />
+            </ListItem>
+            <ListItem
+              key={1}
+              button
+              onClick={() => navigate(`/sops`)}
+              sx={{
+                borderBottom: '1px solid rgba(255,255,255,0.2)',
+                '&:hover': {
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                },
+              }}
+            >
+              <ListItemText
+                primary="Standard Operating Procedures (SOP's)"
+                secondary="This page will outline the Standard Operating Procedures (SOPs) to ensure consistency and clarity in daily operations."
+                primaryTypographyProps={{ sx: { color: '#fff', fontWeight: 'bold' } }}
+                secondaryTypographyProps={{ sx: { color: '#ccc' } }}
+              />
+            </ListItem>
+            <ListItem
+              key={1}
+              button
+              onClick={() => navigate(`/faqs`)}
+              sx={{
+                borderBottom: '1px solid rgba(255,255,255,0.2)',
+                '&:hover': {
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                },
+              }}
+            >
+              <ListItemText
+                primary="FAQs"
+                secondary="This page will provide answers to frequently asked questions by customers to help you find quick solutions and clarify common inquiries."
                 primaryTypographyProps={{ sx: { color: '#fff', fontWeight: 'bold' } }}
                 secondaryTypographyProps={{ sx: { color: '#ccc' } }}
               />
             </ListItem>
         </List>
+
         {/* ------------------------------------------------------------------------------------------------------ */}
 
         {/* Navigation Buttons */}
