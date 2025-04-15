@@ -21,7 +21,7 @@ const Overview = () => {
         minHeight: '100vh',
         backgroundColor: 'rgba(0, 56, 100, 1)',
         color: '#fff',
-        py: 6,
+        py: 3,
       }}
     >
       <Container maxWidth="md">
@@ -33,7 +33,7 @@ const Overview = () => {
         </Typography>
 
         {/* Video List */}
-        <List sx={{ mt: 4 }}>
+        <List sx={{ mt: 0 }}>
           {videoData.map((video) => (
             <ListItem
               key={video.id}

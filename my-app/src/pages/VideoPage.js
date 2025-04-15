@@ -23,7 +23,7 @@ const VideoPage = () => {
         {/* Header Section */}
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
           <Typography variant="h4" gutterBottom>{video.title}</Typography>
-          <img src={pgLogo} alt="PG Logo" style={{ height: '50px', width: 'auto' }} />
+          <img src={pgLogo} alt="PG Logo" style={{ height: '30px', width: 'auto' }} />
         </Box>
 
         {/* Video Container */}
