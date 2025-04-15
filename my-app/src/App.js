@@ -1,0 +1,59 @@
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
+import Home from './pages/Home';
+import VideoPage from './pages/VideoPage';
+import OverviewPage from './pages/Overview';
+
+const theme = createTheme({
+  typography: {
+    fontFamily: "'Source Sans Pro', sans-serif", // Default body font
+    h1: {
+      fontFamily: "'Bebas Neue', sans-serif", // Headline font for h1
+    },
+    h2: {
+      fontFamily: "'Bebas Neue', sans-serif", // Headline font for h2
+    },
+    h3: {
+      fontFamily: "'Bebas Neue', sans-serif", // Headline font for h3
+    },
+    h4: {
+      fontFamily: "'Bebas Neue', sans-serif", // Headline font for h4
+    },
+    h5: {
+      fontFamily: "'Bebas Neue', sans-serif", // Headline font for h5
+    },
+    h6: {
+      fontFamily: "'Bebas Neue', sans-serif", // Headline font for h6
+    },
+    subtitle1: {
+      fontFamily: "'Source Sans Pro', sans-serif", // Body font for subtitle1
+    },
+    subtitle2: {
+      fontFamily: "'Source Sans Pro', sans-serif", // Body font for subtitle2
+    },
+    body1: {
+      fontFamily: "'Source Sans Pro', sans-serif", // Body font for body1
+    },
+    body2: {
+      fontFamily: "'Source Sans Pro', sans-serif", // Body font for body2
+    },
+  },
+});
+
+function App() {
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/overview" element={<OverviewPage />} />
+          <Route path="/video/:id" element={<VideoPage />} />
+        </Routes>
+      </div>
+    </ThemeProvider>
+  );
+}
+
+export default App;
