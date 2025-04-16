@@ -34,7 +34,11 @@ const VideoPage = () => {
             frameBorder="0"
             allowFullScreen
             style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-          />
+          >
+
+            Loading....
+
+          </iframe>
         </Box>
 
         <Typography variant="body1" mt={3}>
@@ -59,8 +63,8 @@ const VideoPage = () => {
               height: '50px',
               fontSize: { xs: '14px', sm: '16px' },
               textTransform: 'none',
-              backgroundColor: '#FF5722',
-              '&:hover': { backgroundColor: '#E64A19' },
+              backgroundColor: '#00b34f',
+              '&:hover': { backgroundColor: '#029241' },
             }}
           >
             Previous
@@ -101,8 +105,8 @@ const VideoPage = () => {
               height: '50px',
               fontSize: { xs: '14px', sm: '16px' },
               textTransform: 'none',
-              backgroundColor: '#FF5722',
-              '&:hover': { backgroundColor: '#E64A19' },
+              backgroundColor: '#00b34f',
+              '&:hover': { backgroundColor: '#029241' },
             }}
           >
             Next
@@ -122,7 +126,7 @@ const VideoPage = () => {
               borderRadius: 6,
               backgroundColor: '#ccc',
               '& .MuiLinearProgress-bar': {
-                backgroundColor: '#FF5722',
+                backgroundColor: '#00b34f',
               },
             }}
           />

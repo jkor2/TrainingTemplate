@@ -38,7 +38,21 @@ const Home = () => {
 
         {/* Start Button */}
         <Box sx={{ display: 'flex', justifyContent: 'center', mt: 4 }}>
-          <Button variant="contained" color="error" onClick={() => navigate('/overview')}>
+          <Button variant="contained"  onClick={() => navigate('/overview')}
+            
+            sx={{
+              backgroundColor: '#00b34f',
+              color: '#fff',
+              textTransform: 'none',
+              height: '50px',
+              width: '120px',
+              '&:hover': {
+                backgroundColor: '#029241',
+              },
+            }}
+          >
+            
+            
             Start Training
           </Button>
         </Box>

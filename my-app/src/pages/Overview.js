@@ -121,28 +121,29 @@ const Overview = () => {
           <Button
             onClick={() => navigate('/')}
             sx={{
-              backgroundColor: '#FF5722',
+              backgroundColor: '#00b34f',
               color: '#fff',
               textTransform: 'none',
               height: '50px',
               width: '120px',
               '&:hover': {
-                backgroundColor: '#E64A19',
+                backgroundColor: '#029241',
               },
             }}
+          
           >
             Home
           </Button>
           <Button
             onClick={() => navigate('/video/1')}
             sx={{
-              backgroundColor: '#FF5722',
+              backgroundColor: '#00b34f',
               color: '#fff',
               textTransform: 'none',
               height: '50px',
               width: '120px',
               '&:hover': {
-                backgroundColor: '#E64A19',
+                backgroundColor: '#029241',
               },
             }}
           >

@@ -69,8 +69,8 @@ const QuickLinksPage = () => {
                   sx={{
                     fontSize: '18px',
                     fontWeight: 'bold',
-                    color: '#FF5722',
-                    '&:hover': { color: '#E64A19' },
+                    color: '#00b34f',
+                    '&:hover': { color: '#029241' },
                   }}
                 >
                   {link.label}
@@ -93,8 +93,8 @@ const QuickLinksPage = () => {
               height: '50px',
               fontSize: { xs: '14px', sm: '16px' },
               textTransform: 'none',
-              backgroundColor: '#FF5722',
-              '&:hover': { backgroundColor: '#E64A19' },
+              backgroundColor: '#00b34f',
+              '&:hover': { backgroundColor: '#029241' },
             }}
           >
             Previous
@@ -124,8 +124,8 @@ const QuickLinksPage = () => {
               height: '50px',
               fontSize: { xs: '14px', sm: '16px' },
               textTransform: 'none',
-              backgroundColor: '#FF5722',
-              '&:hover': { backgroundColor: '#E64A19' },
+              backgroundColor: '#00b34f',
+              '&:hover': { backgroundColor: '#029241' },
             }}
           >
             Next
