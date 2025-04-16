@@ -17,7 +17,7 @@ const FeedbackPage = () => {
 
         {/* Subheader */}
         <Typography variant="subtitle1" sx={{ mb: 3, color: '#b0bec5' }}>
-          We value your input! Please let us know how we can improve this training.
+          Please let us know how we can improve this training.
         </Typography>
 
         {/* Form */}

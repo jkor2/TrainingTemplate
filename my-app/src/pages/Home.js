@@ -33,7 +33,7 @@ const Home = () => {
 
         {/* Welcome Text */}
         <Typography variant="h3" align="center" gutterBottom>
-          DiamondKast Training
+          DiamondKast Contractor Training
         </Typography>
 
         
