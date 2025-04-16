@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Box,
   Container,
@@ -8,12 +8,49 @@ import {
   ListItem,
   ListItemText,
   Stack,
+  TextField,
+  Drawer,
+  IconButton,
+  Divider,
 } from '@mui/material';
+import SearchIcon from '@mui/icons-material/Search';
+import CloseIcon from '@mui/icons-material/Close';
 import { useNavigate } from 'react-router-dom';
 import videoData from './data';
 
 const Overview = () => {
   const navigate = useNavigate();
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [searchInput, setSearchInput] = useState('');
+
+  // Combined searchable data
+  const searchableItems = [
+    ...videoData.map(video => ({
+      label: video.title,
+      description: video.description,
+      path: `/video/${video.id}`,
+    })),
+    {
+      label: "Quick Links & Resources",
+      description: "Quick access to important links and resources",
+      path: "/quicklinks",
+    },
+    {
+      label: "Standard Operating Procedures (SOP's)",
+      description: "Outlines SOPs for consistent operations",
+      path: "/sops",
+    },
+    {
+      label: "FAQs",
+      description: "Frequently asked questions by customers",
+      path: "/faqs",
+    },
+  ];
+
+  const filteredItems = searchableItems.filter(item =>
+    item.label.toLowerCase().includes(searchInput.toLowerCase()) ||
+    item.description.toLowerCase().includes(searchInput.toLowerCase())
+  );
 
   return (
     <Box
@@ -22,14 +59,78 @@ const Overview = () => {
         backgroundColor: 'rgba(0, 56, 100, 1)',
         color: '#fff',
         py: 3,
+        position: 'relative',
       }}
     >
+      {/* Search Toggle Button */}
+      <IconButton
+        onClick={() => setDrawerOpen(true)}
+        sx={{
+          position: 'fixed',
+          top: 20,
+          right: 20,
+          zIndex: 1300,
+          backgroundColor: '#00b34f',
+          color: '#fff',
+          '&:hover': {
+            backgroundColor: '#029241',
+          },
+        }}
+      >
+        <SearchIcon />
+      </IconButton>
+
+      {/* Search Drawer */}
+      <Drawer anchor="right" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
+        <Box sx={{ width: 300, p: 2 }}>
+          <Box display="flex" justifyContent="space-between" alignItems="center">
+            <Typography variant="h6">Search</Typography>
+            <IconButton onClick={() => setDrawerOpen(false)}>
+              <CloseIcon />
+            </IconButton>
+          </Box>
+          <TextField
+            fullWidth
+            variant="outlined"
+            placeholder="Search..."
+            value={searchInput}
+            onChange={(e) => setSearchInput(e.target.value)}
+            sx={{ my: 2 }}
+          />
+          <Divider />
+          <List>
+            {filteredItems.length > 0 ? (
+              filteredItems.map((item, i) => (
+                <ListItem
+                  key={i}
+                  button
+                  onClick={() => {
+                    navigate(item.path);
+                    setDrawerOpen(false);
+                    setSearchInput('');
+                  }}
+                >
+                  <ListItemText
+                    primary={item.label}
+                    secondary={item.description}
+                  />
+                </ListItem>
+              ))
+            ) : (
+              <Typography sx={{ mt: 2, px: 1 }} variant="body2" color="text.secondary">
+                No matches found.
+              </Typography>
+            )}
+          </List>
+        </Box>
+      </Drawer>
+
       <Container maxWidth="md">
         <Typography variant="h3" align="center" gutterBottom>
           Training Overview
         </Typography>
         <Typography variant="h6" align="center" gutterBottom>
-          Choose a video to start watching, or select "Start" at the bottom of the page, to being at video one.
+          Choose a video to start watching, or select "Start" at the bottom of the page, to begin at video one.
         </Typography>
 
         {/* Video List */}
@@ -55,66 +156,63 @@ const Overview = () => {
             </ListItem>
           ))}
         </List>
+
+        {/* Custom List Items */}
         <List>
+          <ListItem
+            button
+            onClick={() => navigate(`/quicklinks`)}
+            sx={{
+              borderBottom: '1px solid rgba(255,255,255,0.2)',
+              '&:hover': {
+                backgroundColor: 'rgba(255, 255, 255, 0.1)',
+              },
+            }}
+          >
+            <ListItemText
+              primary="Quick Links & Resources"
+              secondary="This page provides quick access to important links and helpful resources."
+              primaryTypographyProps={{ sx: { color: '#fff', fontWeight: 'bold' } }}
+              secondaryTypographyProps={{ sx: { color: '#ccc' } }}
+            />
+          </ListItem>
 
-        {/*CUSTOM LIST ITEMS-------------------------------------------------------------------------------------*/}
-        <ListItem
-              key={1}
-              button
-              onClick={() => navigate(`/quicklinks`)}
-              sx={{
-                borderBottom: '1px solid rgba(255,255,255,0.2)',
-                '&:hover': {
-                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                },
-              }}
-            >
-              <ListItemText
-                primary="Quick Links & Rescources"
-                secondary="This page will provide quick access to important links and helpful resources for easy navigation and support."
-                primaryTypographyProps={{ sx: { color: '#fff', fontWeight: 'bold' } }}
-                secondaryTypographyProps={{ sx: { color: '#ccc' } }}
-              />
-            </ListItem>
-            <ListItem
-              key={1}
-              button
-              onClick={() => navigate(`/sops`)}
-              sx={{
-                borderBottom: '1px solid rgba(255,255,255,0.2)',
-                '&:hover': {
-                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                },
-              }}
-            >
-              <ListItemText
-                primary="Standard Operating Procedures (SOP's)"
-                secondary="This page will outline the Standard Operating Procedures (SOPs) to ensure consistency and clarity in daily operations."
-                primaryTypographyProps={{ sx: { color: '#fff', fontWeight: 'bold' } }}
-                secondaryTypographyProps={{ sx: { color: '#ccc' } }}
-              />
-            </ListItem>
-            <ListItem
-              key={1}
-              button
-              onClick={() => navigate(`/faqs`)}
-              sx={{
-                borderBottom: '1px solid rgba(255,255,255,0.2)',
-                '&:hover': {
-                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                },
-              }}
-            >
-              <ListItemText
-                primary="FAQs"
-                secondary="This page will provide answers to frequently asked questions by customers to help you find quick solutions and clarify common inquiries."
-                primaryTypographyProps={{ sx: { color: '#fff', fontWeight: 'bold' } }}
-                secondaryTypographyProps={{ sx: { color: '#ccc' } }}
-              />
-            </ListItem>
+          <ListItem
+            button
+            onClick={() => navigate(`/sops`)}
+            sx={{
+              borderBottom: '1px solid rgba(255,255,255,0.2)',
+              '&:hover': {
+                backgroundColor: 'rgba(255, 255, 255, 0.1)',
+              },
+            }}
+          >
+            <ListItemText
+              primary="Standard Operating Procedures (SOP's)"
+              secondary="This page outlines the SOPs to ensure consistency in daily operations."
+              primaryTypographyProps={{ sx: { color: '#fff', fontWeight: 'bold' } }}
+              secondaryTypographyProps={{ sx: { color: '#ccc' } }}
+            />
+          </ListItem>
+
+          <ListItem
+            button
+            onClick={() => navigate(`/faqs`)}
+            sx={{
+              borderBottom: '1px solid rgba(255,255,255,0.2)',
+              '&:hover': {
+                backgroundColor: 'rgba(255, 255, 255, 0.1)',
+              },
+            }}
+          >
+            <ListItemText
+              primary="FAQs"
+              secondary="This page answers frequently asked customer questions for clarity and quick solutions."
+              primaryTypographyProps={{ sx: { color: '#fff', fontWeight: 'bold' } }}
+              secondaryTypographyProps={{ sx: { color: '#ccc' } }}
+            />
+          </ListItem>
         </List>
-
-        {/* ------------------------------------------------------------------------------------------------------ */}
 
         {/* Navigation Buttons */}
         <Stack direction="row" justifyContent="center" spacing={2} mt={5}>
@@ -130,7 +228,6 @@ const Overview = () => {
                 backgroundColor: '#029241',
               },
             }}
-          
           >
             Home
           </Button>

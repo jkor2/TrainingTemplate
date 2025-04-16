@@ -36,26 +36,109 @@ const Home = () => {
           DiamondKast Training
         </Typography>
 
-        {/* Start Button */}
+        
         <Box sx={{ display: 'flex', justifyContent: 'center', mt: 4 }}>
-          <Button variant="contained"  onClick={() => navigate('/overview')}
-            
-            sx={{
-              backgroundColor: '#00b34f',
-              color: '#fff',
-              textTransform: 'none',
-              height: '50px',
-              width: '120px',
-              '&:hover': {
-                backgroundColor: '#029241',
-              },
-            }}
-          >
-            
-            
-            Start Training
-          </Button>
-        </Box>
+  <Button
+    variant="contained"
+    onClick={() => navigate('/overview')}
+    sx={{
+      backgroundColor: '#00b34f',
+      color: '#fff',
+      textTransform: 'none',
+      height: '50px',
+      width: {
+        xs: '90%',  // wide on mobile
+        sm: '390px' // equal to 3 buttons
+      },
+      maxWidth: '400px', // optional, just to prevent stretching
+      '&:hover': {
+        backgroundColor: '#029241',
+      },
+    }}
+  >
+    Start Training
+  </Button>
+</Box>
+
+<Box
+  sx={{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    mt: 4,
+    flexDirection: {
+      xs: 'column', // stack on mobile
+      sm: 'row',    // row on larger screens
+    },
+    gap: 2,
+  }}
+>
+  <Button
+    variant="contained"
+    onClick={() => navigate('/quicklinks')}
+    sx={{
+      backgroundColor: '#adadb0',
+      color: '#fff',
+      textTransform: 'none',
+      height: '50px',
+      width: {
+        xs: '90%',
+        sm: '120px',
+      },
+      maxWidth: '360px',
+      '&:hover': {
+        backgroundColor: '#656769',
+      },
+    }}
+  >
+    Quick Links
+  </Button>
+
+  <Button
+    variant="contained"
+    onClick={() => navigate('/sops')}
+    sx={{
+      backgroundColor: '#adadb0',
+      color: '#fff',
+      textTransform: 'none',
+      height: '50px',
+      width: {
+        xs: '90%',
+        sm: '120px',
+      },
+      maxWidth: '360px',
+      '&:hover': {
+        backgroundColor: '#656769',
+      },
+    }}
+  >
+    SOPs
+  </Button>
+
+  <Button
+    variant="contained"
+    onClick={() => navigate('/faqs')}
+    sx={{
+      backgroundColor: '#adadb0',
+      color: '#fff',
+      textTransform: 'none',
+      height: '50px',
+      width: {
+        xs: '90%',
+        sm: '120px',
+      },
+      maxWidth: '360px',
+      '&:hover': {
+        backgroundColor: '#656769',
+      },
+    }}
+  >
+    FAQs
+  </Button>
+</Box>
+
+
+
       </Container>
     </Box>
   );
