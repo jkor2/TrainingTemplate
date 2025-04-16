@@ -7,6 +7,7 @@ import OverviewPage from './pages/Overview';
 import QuickLinksPage from './pages/Quicklinks';
 import SOPsPage from './pages/SOPsPage';
 import FAQsPage from './pages/FAQsPage';
+import FeedbackPage from './pages/FeedbackPage';
 
 const theme = createTheme({
   typography: {
@@ -56,7 +57,7 @@ function App() {
           <Route path="/quicklinks" element={<QuickLinksPage />} />
           <Route path="/sops" element={<SOPsPage />} />
           <Route path="/faqs" element={<FAQsPage />} />
-
+          <Route path="/feedback" element={<FeedbackPage />} />
         </Routes>
       </div>
     </ThemeProvider>

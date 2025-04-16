@@ -212,6 +212,23 @@ const Overview = () => {
               secondaryTypographyProps={{ sx: { color: '#ccc' } }}
             />
           </ListItem>
+          <ListItem
+            button
+            onClick={() => navigate(`/feedback`)}
+            sx={{
+              borderBottom: '1px solid rgba(255,255,255,0.2)',
+              '&:hover': {
+                backgroundColor: 'rgba(255, 255, 255, 0.1)',
+              },
+            }}
+          >
+            <ListItemText
+              primary="Feedback"
+              secondary="This page allows you to provide feedback on the training. Let us know if there is anything we are missing, or what can be better explained."
+              primaryTypographyProps={{ sx: { color: '#fff', fontWeight: 'bold' } }}
+              secondaryTypographyProps={{ sx: { color: '#ccc' } }}
+            />
+          </ListItem>
         </List>
 
         {/* Navigation Buttons */}

@@ -140,6 +140,21 @@ const FAQsPage = () => {
           >
             Back to Overview
           </Button>
+
+          <Button
+            variant="contained"
+            onClick={() => navigate('/feedback')}
+            sx={{
+              flex: 1,
+              height: '50px',
+              fontSize: { xs: '14px', sm: '16px' },
+              textTransform: 'none',
+              backgroundColor: '#00b34f',
+              '&:hover': { backgroundColor: '#029241' },
+            }}
+          >
+            Next
+          </Button>
         </Box>
       </Container>
     </Box>
