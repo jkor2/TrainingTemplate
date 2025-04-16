@@ -20,39 +20,39 @@ const videoData = [
     },
     {
       id: 4,
-      title: 'DiamondKast - Pitches, Strikeouts, Walks, Singles and Extra Base Hits',
+      title: 'DiamondKast - Scoring How To - 1',
       description: "This DiamondKast Training video covers ground out double plays, line drive double plays with a man doubled off first, and flyball double plays where a runner is thrown out at home.",
       youtubeId: 'XxC3TfRM3FU'
     },
     {
       id: 5,
-      title: 'DiamondKast - Double Plays',
+      title: 'DiamondKast - Scoring How To - 2',
       description: "This DiamondKast Training video covers how to record pitches, strikeouts, walks, batted outs, singles, and extra-base hits.",
       youtubeId: 'QyRUe8qLvtI'
     },
     {
       id: 6,
-      title: 'DiamondKast Scoring Basics',
-      description: "This DiamondKast Training video covers various game situations, including strikeouts, walks, fielders' choice, sacrifice flies, double plays, tie breakers, rundowns, pinch/courtesy runners, stolen bases, defensive changes, substitutions, position swaps, and pinch hitters.",
-      youtubeId: 'RUoLJ52ajh0'
+      title: 'DiamondKast - Scoring How To - 3',
+      description: "This DiamondKast Training video covers various game situations, including fielder's choices, batters reaching on error, stolen bases, caught stealing, pickoffs, wild pitches, and passed balls.",
+      youtubeId: '7hqWrLly-74'
     },
     {
         id: 7,
-        title: 'DiamondKast Scoring Basics - Errors',
-        description: "This DiamondKast Training video covers different types of errors, including fielding, receiving, and throwing errors.",
-        youtubeId: 'oa-ACJ4ETYs'
+        title: 'DiamondKast - Scoring How To - 4',
+        description: "This DiamondKast Training video covers various scoring scenarios, including advances on throws, advances on errors, assigning multiple errors, base hit with runner out, sacrifice bunts, sacrifice fly outs, and recording a balk.",
+        youtubeId: 'aIBLGnKq3gY'
       },
       {
         id: 8,
-        title: 'DiamondKast Scoring Basics - Deadball Plays',
-        description: "This DiamondKast Training video explains various interference scenarios, including catcher's interference, umpire interference, interference that sends the batter to first, hit by pitch, hit by own batted ball, and batter's interference.",
-        youtubeId: 'WrWwzmaeqqs'
+        title: 'DiamondKast - Batter Pre Pitch Plays',
+        description: "Under Maintence",
+        youtubeId: 'Under Maintence'
       },
       {
         id: 9,
-        title: 'DiamondKast Components',
-        description: "This DiamondKast Training video covers features such as clipboard and pitch count tracking, scoring options, visitor/home box scores, pitch-by-pitch details, clock controls, batter pre-pitch setup, dropped third strikes, wild pitches, passed balls, balks, advancing runners, the undo button, game simulation, and ending the game.",
-        youtubeId: 'K3-dqx0msfc'
+        title: 'DiamondKast - Deadball Plays',
+        description: "Under Maintence",
+        youtubeId: 'Under Maintence'
       },
       {
         id: 10,
@@ -101,6 +101,12 @@ const videoData = [
         title: 'WhenIWork Basics',
         description: "This DiamondKast Training video series covers the basics of using WhenIWork, including confirming shifts with details like date, time, location, and how to get directions.",
         youtubeId: '2_5UWEEVhwM'
+      },
+      {
+        id: 18,
+        title: 'DiamondKast Academy',
+        description: "Under Maintence",
+        youtubeId: 'Under Maintence'
       },
   ];
   

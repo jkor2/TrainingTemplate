@@ -69,7 +69,7 @@ const FAQsPage = () => {
         {/* Header */}
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
           <Typography variant="h4">Frequently Asked Questions (FAQs)</Typography>
-          <img src={pgLogo} alt="PG Logo" style={{ height: '30px', width: 'auto' }} />
+          <a href="/"><img src={pgLogo} alt="PG Logo" style={{ height: '30px', width: 'auto' }} /></a>
         </Box>
 
         {/* FAQ List */}

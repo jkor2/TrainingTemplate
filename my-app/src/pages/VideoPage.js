@@ -4,7 +4,6 @@ import { Box, Container, Typography, Button, LinearProgress } from '@mui/materia
 import { Link } from 'react-router-dom';
 import videoData from './data';
 import pgLogo from './images/pglogo.png'; // PG logo
-import dkPlus from './images/dkPlus.png'; // DK Plus image
 
 const VideoPage = () => {
   const { id } = useParams();
@@ -23,7 +22,7 @@ const VideoPage = () => {
         {/* Header Section */}
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
           <Typography variant="h4" gutterBottom>{video.title}</Typography>
-          <img src={pgLogo} alt="PG Logo" style={{ height: '30px', width: 'auto' }} />
+          <a href="/"><img src={pgLogo} alt="PG Logo" style={{ height: '30px', width: 'auto' }} /></a>
         </Box>
 
         {/* Video Container */}
