@@ -50,7 +50,6 @@ const VideoPage = () => {
           {/* Previous Button */}
           <Button
             variant="contained"
-            disabled={video.id === 1} // Disable if it's the first video
             onClick={() => {
               if (video.id === 1) {
                 navigate('/overview'); // Navigate to overview if it's the first video
@@ -76,6 +75,7 @@ const VideoPage = () => {
               component={Link}
               to="/overview"
               variant="contained"
+              disabled={video.id == 1}
               sx={{
                 flex: 1,
                 height: '50px',
