@@ -42,6 +42,10 @@ const faqData = [
     answer: 'The gameclock ticks upwards, meaning it starts from 0 and goes up to the games time limit. This is started on the first pitch of the game'
   },
   {
+    question: 'DiamondKast stopped working, what do I do?',
+    answer: 'If DiamondKast goes down for any reason, whether it be a bug, connection issue, or an unknown issue. Contact your director to see if they can resolve the issue. In the mean time, go to the "Notes" app on the iPad or iPhone and being noting what happens in the game.'
+  },
+  {
     question: 'A Parent/Coach says the Pitchcount or Game Stats are incorrect, what do I do?',
     answer: 'Direct the Parent/Coach to send an email to stats@perfectgame.org. Ensure they include the gameID and what exactly the issue is. If the pitch count is incorrect, let the director know so they can make a note of the situation to reduce the chance of a misunderstanding in future games of the event.'
   },
