@@ -14,13 +14,13 @@ const AdditionalContentPage = () => {
       <Container maxWidth="md">
         {/* Header */}
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
-          <Typography variant="h4">Additional Content</Typography>
+          <Typography variant="h4">Supplementary Content</Typography>
           <a href="/"><img src={pgLogo} alt="PG Logo" style={{ height: '30px', width: 'auto' }} /></a>
         </Box>
 
         {/* Subheader */}
         <Typography variant="subtitle1" sx={{ mb: 3, color: '#b0bec5' }}>
-          Watch this additional training below
+          Watch this additional training below, this includes various scenarios from the previous released training. 
         </Typography>
 
         {/* Loading Spinner */}

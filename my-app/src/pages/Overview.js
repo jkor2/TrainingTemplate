@@ -170,7 +170,7 @@ const Overview = () => {
             }}
           >
             <ListItemText
-              primary="Additional Content"
+              primary="Supplementary Content"
               secondary="This page provides additional content from the previous training, a majority of this consist of inputting various types of plays and scenarios."
               primaryTypographyProps={{ sx: { color: '#fff', fontWeight: 'bold' } }}
               secondaryTypographyProps={{ sx: { color: '#ccc' } }}
