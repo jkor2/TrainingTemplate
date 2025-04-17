@@ -159,6 +159,24 @@ const Overview = () => {
 
         {/* Custom List Items */}
         <List>
+        <ListItem
+            button
+            onClick={() => navigate(`/additional`)}
+            sx={{
+              borderBottom: '1px solid rgba(255,255,255,0.2)',
+              '&:hover': {
+                backgroundColor: 'rgba(255, 255, 255, 0.1)',
+              },
+            }}
+          >
+            <ListItemText
+              primary="Additional Content"
+              secondary="This page provides additional content from the previous training, a majority of this consist of inputting various types of plays and scenarios."
+              primaryTypographyProps={{ sx: { color: '#fff', fontWeight: 'bold' } }}
+              secondaryTypographyProps={{ sx: { color: '#ccc' } }}
+            />
+          </ListItem>
+
           <ListItem
             button
             onClick={() => navigate(`/quicklinks`)}

@@ -2,7 +2,6 @@ import React from 'react';
 import { Box, Container, Typography, Button, Card, CardContent, Link as MuiLink } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import pgLogo from './images/pglogo.png';
-import videoData from './data';
 
 const quickLinks = [
   {
@@ -45,7 +44,6 @@ const quickLinks = [
 
 const QuickLinksPage = () => {
   const navigate = useNavigate();
-  const lastVideoId = videoData[videoData.length - 1].id;
 
   return (
     <Box sx={{ backgroundColor: 'rgba(0, 56, 100, 1)', minHeight: '100vh', py: 4, color: '#fff' }}>
@@ -92,7 +90,8 @@ const QuickLinksPage = () => {
         <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, justifyContent: 'space-between', mt: 5, gap: 2 }}>
           <Button
             variant="contained"
-            onClick={() => navigate(`/video/${lastVideoId}`)}
+          
+            onClick={() => navigate(`/additional`)}
             sx={{
               flex: 1,
               height: '50px',

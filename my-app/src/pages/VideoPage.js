@@ -114,7 +114,7 @@ const VideoPage = () => {
             variant="contained"
             onClick={() => {
               if (video.id === videoData.length) {
-                navigate('/quicklinks'); // Navigate to /quicklinks if it's the last video
+                navigate('/additional'); // Navigate to /quicklinks if it's the last video
               } else {
                 navigate(`/video/${video.id + 1}`); // Go to the next video
               }
