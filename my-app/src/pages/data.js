@@ -51,7 +51,7 @@ const videoData = [
       {
         id: 9,
         title: 'DiamondKast - Deadball Plays',
-        description: "This DiamondKast Training video covers dead ball plays, focusing on situations when the batter is either on or out. Topics include catcher's interference, umpire's interference, interference on the way to first base, hit by the batter's own batted ball, batter interference, and the infield fly rule. Learn the proper procedures and rules for handling these unique scenarios on the field.",
+        description: "This DiamondKast Training video covers dead ball plays, focusing on situations when the batter is either on or out. Topics include catcher's interference, umpire's interference, interference on the way to first base, hit by the batter's own batted ball, batter interference, and the infield fly rule.",
         youtubeId: 'WrWwzmaeqqs'
       },
       {
@@ -63,7 +63,7 @@ const videoData = [
       {
         id: 11,
         title: 'PG Website - Finding Event & Rules',
-        description: "This DiamondKast Training video guides users on how to navigate the Perfect Game website, access events, locate event rules, and provides an overview of those rules.",
+        description: "This DiamondKast Training video guides users on how to navigate the Perfect Game website, access events, locate event rules, and locating the pitching report.",
         youtubeId: 'NNaYIHp35JQ'
       },
       {
