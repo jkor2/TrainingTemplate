@@ -18,7 +18,7 @@ const sopLinks = [
   {
     label: 'Representing Perfect Game',
     href: 'https://example.com/weather-protocol',
-    description: "Those contracted or employed by Perfect Game should represent the company well. We want to ensure our customers have a great experience at this event. Always be professional, courteous, and helpful. Whether you're interacting with coaches, players, or parents, your behavior reflects the values of Perfect Game. Treat everyone with respect and professionalism, as we aim to create a positive environment for all involved."
+    description: "Those Field Manager contracted by Perfect Game should represent the company well. We want to ensure our customers have a great experience at this event. Always be professional, courteous, and helpful. Whether you're interacting with coaches, players, or parents, your behavior reflects the values of Perfect Game. Treat everyone with respect and professionalism, as we aim to create a positive environment for all involved."
   },
   {
     label: 'Communicating with Directors',
