@@ -1,14 +1,14 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
-import Home from './pages/Home';
-import VideoPage from './pages/VideoPage';
-import OverviewPage from './pages/Overview';
-import QuickLinksPage from './pages/Quicklinks';
-import SOPsPage from './pages/SOPsPage';
-import FAQsPage from './pages/FAQsPage';
-import FeedbackPage from './pages/FeedbackPage';
-import AdditionalContentPage from './pages/AdditionalContentPage';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
+import Home from "./pages/Home";
+import VideoPage from "./pages/VideoPage";
+import OverviewPage from "./pages/Overview";
+import QuickLinksPage from "./pages/Quicklinks";
+import SOPsPage from "./pages/SOPsPage";
+import FAQsPage from "./pages/FAQsPage";
+import FeedbackPage from "./pages/FeedbackPage";
+import AdditionalContentPage from "./pages/AdditionalContentPage";
 
 const theme = createTheme({
   typography: {
@@ -59,7 +59,6 @@ function App() {
           <Route path="/sops" element={<SOPsPage />} />
           <Route path="/faqs" element={<FAQsPage />} />
           <Route path="/additional" element={<AdditionalContentPage />} />
-
         </Routes>
       </div>
     </ThemeProvider>
