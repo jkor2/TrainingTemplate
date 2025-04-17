@@ -50,9 +50,9 @@ const sopLinks = [
     description: "If the DiamondKast app goes down, your director may instruct you to begin scoring the game using the Notes app or with pen and paper. In this case, you should record three key items for each pitch: pitch type, pitch speed, and the result of the play. Keep your notes organized and easy to follow so the game can be accurately rescored later. Once the game is complete, send your notes to the director."
   },
   {
-    label: 'International Tie Breaker Moder',
+    label: 'International Tiebreaker Moder',
     href: 'https://example.com/weather-protocol',
-    description: "When the game goes into the International Tie Breaker rule, in the top left corner of DiamondKast, you will see the toggle of 3 horizontal lines stacked above each other. This is where we can change the game mode. Once the side menu is opened, select and confirm 'Tiebreak Mode.' \n\nThis will place the last three batters out on base, with one out. \n\nBring both coaches to home plate, explain the situation, and alert the coaches who will be on base to start the inning. (The names will be shown in DiamondKast.)"
+    description: "When the game goes into the International Tiebreaker rule, in the top left corner of DiamondKast, you will see the toggle of 3 horizontal lines stacked above each other. This is where we can change the game mode. Once the side menu is opened, select and confirm 'Tiebreak Mode.' \n\nThis will place the last three batters out on base, with one out. \n\nBring both coaches to home plate, explain the situation, and alert the coaches who will be on base to start the inning. (The names will be shown in DiamondKast.)"
   },
   {
     label: 'Game Protests',
