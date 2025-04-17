@@ -34,6 +34,25 @@ const VideoPage = () => {
           <a href="/"><img src={pgLogo} alt="PG Logo" style={{ height: '30px' }} /></a>
         </Box>
 
+                {/* Progress Bar */}
+         <Box sx={{ mt: 1, mb:2 }}>
+          <Typography variant="body2" sx={{ mb: .5 }}>
+            Progress: {Math.round(progress)}%
+          </Typography>
+          <LinearProgress
+            variant="determinate"
+            value={progress}
+            sx={{
+              height: 5,
+              borderRadius: 6,
+              backgroundColor: '#ccc',
+              '& .MuiLinearProgress-bar': {
+                backgroundColor: '#00b34f',
+              },
+            }}
+          />
+        </Box>
+
         {/* Conditional Video/Image/GIF Content */}
         {video.title === "DiamondKast - Batter Pre Pitch Plays" ? (
           <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mb: 3 }}>
@@ -190,24 +209,7 @@ const VideoPage = () => {
           </Button>
         </Box>
 
-        {/* Progress Bar */}
-        <Box sx={{ mt: 2 }}>
-          <Typography variant="body2" sx={{ mb: 1 }}>
-            Progress: {Math.round(progress)}%
-          </Typography>
-          <LinearProgress
-            variant="determinate"
-            value={progress}
-            sx={{
-              height: 5,
-              borderRadius: 6,
-              backgroundColor: '#ccc',
-              '& .MuiLinearProgress-bar': {
-                backgroundColor: '#00b34f',
-              },
-            }}
-          />
-        </Box>
+
       </Container>
     </Box>
   );
