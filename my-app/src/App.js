@@ -58,7 +58,6 @@ function App() {
           <Route path="/quicklinks" element={<QuickLinksPage />} />
           <Route path="/sops" element={<SOPsPage />} />
           <Route path="/faqs" element={<FAQsPage />} />
-          <Route path="/feedback" element={<FeedbackPage />} />
           <Route path="/additional" element={<AdditionalContentPage />} />
 
         </Routes>

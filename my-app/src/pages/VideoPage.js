@@ -3,16 +3,19 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { Box, Container, Typography, Button, LinearProgress, CircularProgress } from '@mui/material';
 import { Link } from 'react-router-dom';
 import videoData from './data';
-import pgLogo from './images/pglogo.png'; // PG logo
+import pgLogo from './images/pglogo.png';
+import beforeImage from './images/before.jpeg';
+import afterImage from './images/after.jpeg';
+import academyGif from './images/dkAcademy.gif'; // ✅ Import your GIF here
 
 const VideoPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const video = videoData.find(v => v.id === parseInt(id));
-  const [loading, setLoading] = useState(true); // track iframe loading
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setLoading(true); // reset loading when navigating to a new video
+    setLoading(true);
   }, [id]);
 
   if (!video) {
@@ -24,42 +27,104 @@ const VideoPage = () => {
   return (
     <Box sx={{ backgroundColor: 'rgba(0, 56, 100, 1)', minHeight: '100vh', color: '#fff', py: 3 }}>
       <Container maxWidth="md">
-        {/* Header Section */}
+
+        {/* Header */}
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
-          <Typography variant="h4" gutterBottom>
-            {video.title}
-          </Typography>
-          <a href="/"><img src={pgLogo} alt="PG Logo" style={{ height: '30px', width: 'auto' }} /></a>
+          <Typography variant="h4" gutterBottom>{video.title}</Typography>
+          <a href="/"><img src={pgLogo} alt="PG Logo" style={{ height: '30px' }} /></a>
         </Box>
 
-        {/* Video Container */}
-        <Box sx={{ position: 'relative', paddingTop: '65%', mb: 3 }}>
-          {loading && (
-            <Box sx={{
-              position: 'absolute', top: 0, left: 0, width: '100%', height: '100%',
-              display: 'flex', justifyContent: 'center', alignItems: 'center',
-              backgroundColor: 'rgba(0, 0, 0, 0.4)', zIndex: 1
-            }}>
-              <CircularProgress size={50} sx={{ color: '#00b34f' }} />
-            </Box>
-          )}
-          <iframe
-            src={`https://www.youtube.com/embed/${video.youtubeId}`}
-            title={video.title}
-            frameBorder="0"
-            allowFullScreen
-            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-            onLoad={() => setLoading(false)}
-          />
-        </Box>
+        {/* Conditional Video/Image/GIF Content */}
+        {video.title === "DiamondKast - Batter Pre Pitch Plays" ? (
+          <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mb: 3 }}>
+            <img src={beforeImage} alt="Before" style={{ width: '35%', marginRight: '10px' }} />
+            <Typography variant="h4" sx={{ marginX: '10px' }}>&#8594;</Typography>
+            <img src={afterImage} alt="After" style={{ width: '35%' }} />
+          </Box>
+        ) : video.title === "DiamondKast Academy" ? (
+          <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mb: 3 }}>
+            <img
+              src={academyGif}
+              alt="DiamondKast Academy Demo"
+              style={{ maxWidth: '100%', borderRadius: '10px' }}
+            />
+          </Box>
+        ) : (
+          <Box sx={{ position: 'relative', paddingTop: '65%', mb: 3 }}>
+            {loading && (
+              <Box sx={{
+                position: 'absolute', top: 0, left: 0, width: '100%', height: '100%',
+                display: 'flex', justifyContent: 'center', alignItems: 'center',
+                backgroundColor: 'rgba(0, 0, 0, 0.4)', zIndex: 1
+              }}>
+                <CircularProgress size={50} sx={{ color: '#00b34f' }} />
+              </Box>
+            )}
+            <iframe
+              src={`https://www.youtube.com/embed/${video.youtubeId}`}
+              title={video.title}
+              frameBorder="0"
+              allowFullScreen
+              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+              onLoad={() => setLoading(false)}
+            />
+          </Box>
+        )}
 
-        {/* Description */}
+        {/* Description Section */}
         <Typography variant="body1" mt={3}>
           {video.title === "DiamondKast Academy" ? (
             <>
-              This DiamondKast Training video covers the features of DiamondKast Academy and how to use it effectively.{" "}
-              <strong>DiamondKast Academy</strong> is the go-to resource for everything related to scoring while on site.{" "}
-              Visit the full site <a href="https://www.diamondkast.com/tutorials?section=welcome-slides" target="_blank" rel="noopener noreferrer" style={{ color: '#00b34f' }}>here</a>.
+  <Typography variant="body1" paragraph>
+    <strong>diamondkast.com</strong> was created to help scorers better understand each individual function of DiamondKast. 
+    This site should be used as your <strong>GO TO</strong> onsite resource when you are unsure of how to score a particular play.
+  </Typography>
+
+  <Typography variant="body1" paragraph>
+    Here are the features provided by <strong>DiamondKast Academy</strong>:
+  </Typography>
+
+  <ul style={{ marginLeft: '1.5rem' }}>
+    <li>
+      <Typography variant="body1">
+        <strong>Searchable Play</strong> – If you do not know how to score a strike, you can search <em>strikeout</em> to get the resource.
+      </Typography>
+    </li>
+    <li>
+      <Typography variant="body1">
+        <strong>Video Walkthrough</strong> – Each scoring resource contains a video walkthrough.
+      </Typography>
+    </li>
+    <li>
+      <Typography variant="body1">
+        <strong>Step by Step</strong> – Each scoring resource contains a step-by-step guide under the video, with images.
+      </Typography>
+    </li>
+  </ul>
+
+  <Typography variant="body1" paragraph sx={{ mt: 2 }}>
+    Check out{' '}
+    <a
+      href="https://www.diamondkast.com/tutorials?section=welcome-slides"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{ color: '#00b34f', textDecoration: 'none', fontWeight: 'bold' }}
+    >
+      DiamondKast Academy
+    </a>{' '}
+    to learn more.
+  </Typography>
+</>
+
+          ) : video.title === "DiamondKast - Batter Pre Pitch Plays" ? (
+            <>
+              In the bottom right, selecting "Batter Pre-Pitch" will bring a pop-up with the following options:
+              <ul>
+                <li><strong>Automatic Out</strong> - Will automatically retire the batter and add 1 out to the box score.</li>
+                <li><strong>Illegal Action Without Pitch</strong> - Will automatically retire the batter and add 1 out to the box score.</li>
+                <li><strong>Intentional Walk</strong> - Will automatically move the batter to first, and advance a current runner 1 base if they are on first.</li>
+                <li><strong>Skip Batter</strong> - Will skip the current batter at the plate, bringing up the next batter.</li>
+              </ul>
             </>
           ) : (
             video.description
