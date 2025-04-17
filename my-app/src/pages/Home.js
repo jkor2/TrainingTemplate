@@ -143,7 +143,7 @@ const Home = () => {
         <Box sx={{ mt: 6, textAlign: 'center' }}>
   <Tooltip title="Check out PG-Training">
     <Button
-      href="https://www.youtube.com/@PG-Training"
+      href="https://www.youtube.com/@PG-Training/playlists"
       target="_blank"
       rel="noopener noreferrer"
       startIcon={<YouTubeIcon sx={{ color: 'red' }} />}
