@@ -23,7 +23,7 @@ const Overview = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [searchInput, setSearchInput] = useState('');
 
-  // Combined searchable data
+  // Combined searchable data including custom items
   const searchableItems = [
     ...videoData.map(video => ({
       label: video.title,
@@ -31,22 +31,28 @@ const Overview = () => {
       path: `/video/${video.id}`,
     })),
     {
+      label: "Supplementary Content",
+      description: "This page provides additional content from the previous training, a majority of this consists of inputting various types of plays and scenarios.",
+      path: "/additional",
+    },
+    {
       label: "Quick Links & Resources",
-      description: "Quick access to important links and resources",
+      description: "This page provides quick access to important links and helpful resources. This includes, finding an event, DiamondKast Academy, High School Rules, Youth Rules, High School Pitching Rules, Youth Pitching Rules, and the Youtube Training Playlist",
       path: "/quicklinks",
     },
     {
       label: "Standard Operating Procedures (SOP's)",
-      description: "Outlines SOPs for consistent operations",
+      description: "This page outlines the SOPs to ensure consistency in daily operations. This includes, Representing Perfect Game, Communicating with Directors, Red Players, Missing Players, Home and Away Swapped, Tie Breaker Rule, Game Protests, Ejections and Fights, Stat Corrections, DiamondKast Stopped Working, Illegal Bats, and Getting Help.",
       path: "/sops",
     },
     {
       label: "FAQs",
-      description: "Frequently asked questions by customers",
+      description: "This page answers frequently asked customer questions for clarity and quick solutions. This includes, Arriving, Late Teams, Late Umpires, Equipment, What to Bring, What to Wear, Logged out DiamondKast, Logged out of Stream Phone, Dropping a Shift, NewTek, Start Time, Incorrect Stats, Incorrect Highlights, and No Livestream.",
       path: "/faqs",
     },
   ];
 
+  // Filter the items based on the search input
   const filteredItems = searchableItems.filter(item =>
     item.label.toLowerCase().includes(searchInput.toLowerCase()) ||
     item.description.toLowerCase().includes(searchInput.toLowerCase())
@@ -159,7 +165,7 @@ const Overview = () => {
 
         {/* Custom List Items */}
         <List>
-        <ListItem
+          <ListItem
             button
             onClick={() => navigate(`/additional`)}
             sx={{
@@ -171,7 +177,7 @@ const Overview = () => {
           >
             <ListItemText
               primary="Supplementary Content"
-              secondary="This page provides additional content from the previous training, a majority of this consist of inputting various types of plays and scenarios."
+              secondary="This page provides additional content from the previous training, a majority of this consists of inputting various types of plays and scenarios."
               primaryTypographyProps={{ sx: { color: '#fff', fontWeight: 'bold' } }}
               secondaryTypographyProps={{ sx: { color: '#ccc' } }}
             />
@@ -189,7 +195,7 @@ const Overview = () => {
           >
             <ListItemText
               primary="Quick Links & Resources"
-              secondary="This page provides quick access to important links and helpful resources."
+              secondary="This page provides quick access to important links and helpful resources. This includes, finding an event, DiamondKast Academy, High School Rules, Youth Rules, High School Pitching Rules, Youth Pitching Rules, and the Youtube Training Playlist"
               primaryTypographyProps={{ sx: { color: '#fff', fontWeight: 'bold' } }}
               secondaryTypographyProps={{ sx: { color: '#ccc' } }}
             />
@@ -207,7 +213,7 @@ const Overview = () => {
           >
             <ListItemText
               primary="Standard Operating Procedures (SOP's)"
-              secondary="This page outlines the SOPs to ensure consistency in daily operations."
+              secondary="This page outlines the SOPs to ensure consistency in daily operations. This includes, Representing Perfect Game, Communicating with Directors, Red Players, Missing Players, Home and Away Swapped, Tie Breaker Rule, Game Protests, Ejections and Fights, Stat Corrections, DiamondKast Stopped Working, Illegal Bats, and Getting Help."
               primaryTypographyProps={{ sx: { color: '#fff', fontWeight: 'bold' } }}
               secondaryTypographyProps={{ sx: { color: '#ccc' } }}
             />
@@ -225,16 +231,15 @@ const Overview = () => {
           >
             <ListItemText
               primary="FAQs"
-              secondary="This page answers frequently asked customer questions for clarity and quick solutions."
+              secondary="This page answers frequently asked customer questions for clarity and quick solutions. This includes, Arriving, Late Teams, Late Umpires, Equipment, What to Bring, What to Wear, Logged out DiamondKast, Logged out of Stream Phone, Dropping a Shift, NewTek, Start Time, Incorrect Stats, Incorrect Highlights, and No Livestream."
               primaryTypographyProps={{ sx: { color: '#fff', fontWeight: 'bold' } }}
               secondaryTypographyProps={{ sx: { color: '#ccc' } }}
             />
           </ListItem>
-
         </List>
 
-        {/* Navigation Buttons */}
-        <Stack direction="row" justifyContent="center" spacing={2} mt={5}>
+  {/* Navigation Buttons */}
+  <Stack direction="row" justifyContent="center" spacing={2} mt={5}>
           <Button
             onClick={() => navigate('/')}
             sx={{

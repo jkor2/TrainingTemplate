@@ -45,7 +45,7 @@ const videoData = [
       {
         id: 8,
         title: 'DiamondKast - Batter Pre Pitch Plays',
-        description: "Under Maintence",
+        description: "This page covers the 'Batter Pre-Pitch' options, including Automatic Out, Illegal Action Without Pitch, Intentional Walk, and Skip Batter, which allow you to manage specific pre-pitch actions such as retiring the batter, advancing runners, or skipping the batter entirely.",
         youtubeId: 'Under Maintence'
       },
       {

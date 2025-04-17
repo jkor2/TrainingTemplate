@@ -38,12 +38,20 @@ const faqData = [
     answer: 'Wear comfortable clothing that is appropriate for the weather. If you have PG attire, you can wear that. Please do not wear any tank tops or open-toed shoes.'
   },
   {
-    question: 'When does the clock start for the game?',
-    answer: 'The gameclock ticks upwards, meaning it starts from 0 and goes up to the games time limit. This is started on the first pitch of the game'
+    question: 'DiamondKast or the Streaming Phone is not Logged, what do I do?',
+    answer: 'If one of your devices is not logged in, please ask your Event Director for the login details. They will be more than happy to provide you with them.'
   },
   {
-    question: 'DiamondKast stopped working, what do I do?',
-    answer: 'If DiamondKast goes down for any reason, whether it be a bug, connection issue, or an unknown issue. Contact your director to see if they can resolve the issue. In the mean time, go to the "Notes" app on the iPad or iPhone and being noting what happens in the game.'
+    question: 'I cannot make my shift, who do I contact?',
+    answer: 'We understand emergencies happen. If you cannot make the shift you are scheduled for, please notify the person who scheduled that shift for you. If you do not know who scheduled it, contact your Event Director or Assistant Event Coordinator for guidance.'
+  },
+  {
+    question: 'I cannot get into my NewTek account, who do I contact?',
+    answer: 'If you cannot get into your NewTek account, please reach out to your Event Director or Perfect Game contact for assistance.'
+  },
+  {
+    question: 'When does the clock start for the game?',
+    answer: 'The gameclock ticks upwards, meaning it starts from 0 and goes up to the games time limit. This is started on the first pitch of the game'
   },
   {
     question: 'A Parent/Coach says the Pitchcount or Game Stats are incorrect, what do I do?',
@@ -57,10 +65,7 @@ const faqData = [
     question: 'A Parent/Coach says they cannot see the livestream, what do I do?',
     answer: 'In between innings, open up the steam box and check if the livestream is displaying live on the PG Broadcaster App. Sometimes the streaming phone will overheat or enter a rest mode. If this is the case, restart the stream. If the PG Broadcaster app is showing it is still live, contact the event director so they can get in contact with the live streaming team. If your field has a hardwired camera that automatically streams the games, get in contact with your event director.'
   },
-  {
-    question: 'A Parent/Coach says the other team is using an illegal bat, what do I do?',
-    answer: 'This must be called out by the coach when the player using the bat is at the plate. If it is called out at that time, have the umpire check the bat. If the umpire is unsure, alert the event director to perform a bat inspection.'
-  },
+
   // Add more FAQs as needed
 ];
 

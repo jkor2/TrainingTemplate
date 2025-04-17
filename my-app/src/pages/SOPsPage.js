@@ -41,6 +41,10 @@ const sopLinks = [
     description: "If the lineups are in and the home and away teams are swapped on DiamondKast, immediately contact the Event Director for a solution. You will need to stop scoring the game on DiamondKast, go to the 'Notes' application on the iPad or iPhone, and begin writing down what happened. This way, when the issue is fixed, the scoring can be caught up."
   },
   {
+    label: 'DiamondKast Stopped Working',
+    description: 'If DiamondKast goes down for any reason, whether it be a bug, connection issue, or an unknown issue. Contact your director to see if they can resolve the issue. In the mean time, go to the "Notes" app on the iPad or iPhone and being noting what happens in the game.'
+  },
+  {
     label: 'Scoring with the "Notes" app, or with pen in paper.',
     href: 'https://example.com/weather-protocol',
     description: "If the DiamondKast app goes down, your director may instruct you to begin scoring the game using the Notes app or with pen and paper. In this case, you should record three key items for each pitch: pitch type, pitch speed, and the result of the play. Keep your notes organized and easy to follow so the game can be accurately rescored later. Once the game is complete, send your notes to the director."
@@ -64,6 +68,10 @@ const sopLinks = [
     label: 'Stat Corrections',
     href: 'https://example.com/weather-protocol',
     description: "If you are the person submitting a stat correction, you should reference the video provided in this training to use the correct template. \n\nIf a parent or coach wants to send in a stat correction, they must submit all required information to stats@perfectgame.org for processing."
+  },
+  {
+    label: 'Possible Illegal Bats',
+    description: 'This must be called out by the coach when the player using the bat is at the plate. If it is called out at that time, have the umpire check the bat. If the umpire is unsure, alert the event director to perform a bat inspection.'
   },
   {
     label: 'Im stuck, what do I do?',
