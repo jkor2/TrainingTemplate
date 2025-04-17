@@ -62,9 +62,9 @@ const videoData = [
       },
       {
         id: 11,
-        title: 'Navigating the Perfect Game Website and Rules',
-        description: "This DiamondKast Training video guides users on how to navigate the Perfect Game website, access events, find alternative routes, locate event rules, and provides an overview of those rules.",
-        youtubeId: 'f_cqga2gSIQ'
+        title: 'PG Website - Finding Event & Rules',
+        description: "This DiamondKast Training video guides users on how to navigate the Perfect Game website, access events, locate event rules, and provides an overview of those rules.",
+        youtubeId: 'NNaYIHp35JQ'
       },
       {
         id: 12,
@@ -75,8 +75,8 @@ const videoData = [
       {
         id: 13,
         title: 'Setting up the stream box',
-        description: "This DiamondKast Training video guides you through setting up the stream box, including hanging up the clamps, understanding the contents of the box, securing power, getting the stream up, plugging in the phone and fan, setting the camera for optimal viewing of 3rd and 1st bases, and wrapping up the setup process.",
-        youtubeId: 'TJXkLB5Rj74'
+        description: "This DiamondKast Training video guides you through setting up the stream box, including hanging up the clamps, understanding the contents of the box, securing power, plugging in the phone and fan, setting the camera for optimal viewing of 3rd and 1st bases, and wrapping up the setup process.",
+        youtubeId: 'LtREc4hrzoY'
       },
       {
         id: 14,
@@ -105,7 +105,7 @@ const videoData = [
       {
         id: 18,
         title: 'DiamondKast Academy',
-        description: "Under Maintence",
+        description: "This DiamondKast Training video covers the features of DiamondKast Academy and how to use it effectively. DiamondKast Academy is the go-to resource for everything related to scoring while on site.",
         youtubeId: 'Under Maintence'
       },
   ];

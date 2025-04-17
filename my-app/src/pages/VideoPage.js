@@ -21,7 +21,10 @@ const VideoPage = () => {
       <Container maxWidth="md">
         {/* Header Section */}
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
-          <Typography variant="h4" gutterBottom>{video.title}</Typography>
+          <Typography variant="h4" gutterBottom>
+            
+            {video.title}</Typography>
+ 
           <a href="/"><img src={pgLogo} alt="PG Logo" style={{ height: '30px', width: 'auto' }} /></a>
         </Box>
 
@@ -41,8 +44,25 @@ const VideoPage = () => {
         </Box>
 
         <Typography variant="body1" mt={3}>
-          {video.description}
-        </Typography>
+        <Box>
+  <Typography variant="body1" sx={{ mt: 1 }}>
+  <Typography variant="body1" sx={{ mt: 1 }}>
+  {video.title === "DiamondKast Academy" ? (
+    <>
+      This DiamondKast Training video covers the features of DiamondKast Academy and how to use it effectively.{" "}
+      <strong>DiamondKast Academy</strong> is the go-to resource for everything related to scoring while on site.{" "}
+      Visit the full site <a href="https://www.diamondkast.com/tutorials?section=welcome-slides" target="_blank" rel="noopener noreferrer" style={{ color: '#00b34f' }}>here</a>.
+    </>
+  ) : (
+    video.description
+  )}
+</Typography>
+
+    
+  </Typography>
+
+  
+</Box>        </Typography>
 
         {/* Navigation Buttons */}
         <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, justifyContent: 'space-between', mt: 4, gap: 2 }}>

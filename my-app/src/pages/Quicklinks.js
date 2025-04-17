@@ -35,6 +35,11 @@ const quickLinks = [
     href: 'https://docs.google.com/document/d/1qdzg-k43krilbtOdBDoHB82jGiubtrYeNctHETPA2IE/edit?usp=sharing',
     description: 'View the current Youth Pitching rules for a Perfect Game event. Updated 4/15/2025.',
   },
+  {
+    label: 'PG-Training Field Manager Playlist',
+    href: 'https://www.youtube.com/watch?v=BYNCsdumpI8&list=PLv9RWYSrjeRyKgNnCUTpW9QNixw55wfht',
+    description: 'View all the videos on our Youtube Playlist.',
+  },
   // Add more as needed
 ];
 
