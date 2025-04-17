@@ -1,5 +1,5 @@
-import React from 'react';
-import { Box, Container, Typography, Button } from '@mui/material';
+import React, { useState } from 'react';
+import { Box, Container, Typography, Button, CircularProgress } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import pgLogo from './images/pglogo.png';
 import videoData from './data';
@@ -7,6 +7,7 @@ import videoData from './data';
 const AdditionalContentPage = () => {
   const navigate = useNavigate();
   const lastVideoId = videoData[videoData.length - 1].id;
+  const [iframeLoaded, setIframeLoaded] = useState(false);
 
   return (
     <Box sx={{ backgroundColor: 'rgba(0, 56, 100, 1)', minHeight: '100vh', py: 4, color: '#fff' }}>
@@ -22,8 +23,15 @@ const AdditionalContentPage = () => {
           Watch this additional training below
         </Typography>
 
+        {/* Loading Spinner */}
+        {!iframeLoaded && (
+          <Box sx={{ display: 'flex', justifyContent: 'center', mb: 3 }}>
+            <CircularProgress sx={{ color: '#00b34f' }} />
+          </Box>
+        )}
+
         {/* Google Slides Embed */}
-        <Box sx={{ display: 'flex', justifyContent: 'center', mb: 4 }}>
+        <Box sx={{ display: iframeLoaded ? 'flex' : 'none', justifyContent: 'center', mb: 4 }}>
           <iframe
             src="https://docs.google.com/presentation/d/e/2PACX-1vRkudukHSL3ZEPlBPt2gS5LTF5p6jUlmj0HWLsAi6OCgukdNzrXMJEmKw7uN2Hj9Hqi1j7DPycNOew2/pubembed?start=false&loop=false&delayms=60000"
             frameBorder="0"
@@ -33,7 +41,8 @@ const AdditionalContentPage = () => {
             mozallowfullscreen="true"
             webkitallowfullscreen="true"
             title="Google Slides Training"
-          >Loading....</iframe>
+            onLoad={() => setIframeLoaded(true)}
+          />
         </Box>
 
         {/* Navigation Buttons */}

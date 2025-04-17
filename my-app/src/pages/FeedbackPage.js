@@ -1,10 +1,16 @@
-import React from 'react';
-import { Box, Container, Typography, Button } from '@mui/material';
+import React, { useState } from 'react';
+import { Box, Container, Typography, Button, CircularProgress } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import pgLogo from './images/pglogo.png';
 
 const FeedbackPage = () => {
+  const [loading, setLoading] = useState(true); // State to track loading
   const navigate = useNavigate();
+
+  // Function to handle the onLoad event for the iframe
+  const handleIframeLoad = () => {
+    setLoading(false); // Set loading to false once the iframe is loaded
+  };
 
   return (
     <Box sx={{ backgroundColor: 'rgba(0, 56, 100, 1)', minHeight: '100vh', py: 4, color: '#fff' }}>
@@ -29,8 +35,20 @@ const FeedbackPage = () => {
             p: 2,
             mb: 5,
             boxShadow: 3,
+            position: 'relative', // Make sure we can position the loading icon correctly
           }}
         >
+          {/* Loading spinner */}
+          {loading && (
+            <Box sx={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+            }}>
+              <CircularProgress />
+            </Box>
+          )}
           <iframe
             src="https://docs.google.com/forms/d/e/1FAIpQLScHUktSmJXr4PaH_g-MNgMMmGQYkAuFGJ3HXe7G0CfdFyKBPA/viewform?embedded=true"
             width="100%"
@@ -40,6 +58,7 @@ const FeedbackPage = () => {
             marginWidth="0"
             title="Feedback Form"
             style={{ borderRadius: '8px' }}
+            onLoad={handleIframeLoad} // Set loading to false when the iframe loads
           >
             Loading…
           </iframe>
