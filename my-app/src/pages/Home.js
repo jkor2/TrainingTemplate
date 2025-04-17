@@ -164,7 +164,7 @@ const Home = () => {
           },
         }}
       >
-        YouTube Video Playlist
+        Youtube Scoring Playlist
       </Button>
     </Tooltip>
 
@@ -200,7 +200,7 @@ const Home = () => {
           },
         }}
       >
-        Google Slide Version
+        Google Slides Training
       </Button>
     </Tooltip>
   </Box>
