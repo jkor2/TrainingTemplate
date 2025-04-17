@@ -101,7 +101,7 @@ const QuickLinksPage = () => {
               '&:hover': { backgroundColor: '#029241' },
             }}
           >
-            Previous
+            Supplementary Videos 
           </Button>
 
           <Button
@@ -132,7 +132,7 @@ const QuickLinksPage = () => {
               '&:hover': { backgroundColor: '#029241' },
             }}
           >
-            Next
+            SOP's
           </Button>
         </Box>
       </Container>

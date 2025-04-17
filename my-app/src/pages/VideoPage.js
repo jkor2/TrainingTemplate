@@ -167,7 +167,7 @@ const VideoPage = () => {
               '&:hover': { backgroundColor: '#029241' },
             }}
           >
-            Previous
+            {video.id === 1 ? "Back to Overview" : "Previous"}
           </Button>
           {video.id == 1 ? "" :           <Box sx={{ display: 'flex', justifyContent: 'center', flex: 1 }}>
             <Button
@@ -205,7 +205,9 @@ const VideoPage = () => {
               '&:hover': { backgroundColor: '#029241' },
             }}
           >
-            Next
+
+            {video.id === videoData.length ? "Supplementary Videos" : "Next"}
+            
           </Button>
         </Box>
 

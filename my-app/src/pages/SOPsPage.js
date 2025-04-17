@@ -151,7 +151,7 @@ const SOPsPage = () => {
               '&:hover': { backgroundColor: '#029241' },
             }}
           >
-            Previous
+            Quick Links
           </Button>
 
           <Button
@@ -182,7 +182,7 @@ const SOPsPage = () => {
               '&:hover': { backgroundColor: '#029241' },
             }}
           >
-            Next
+            FAQ's
           </Button>
         </Box>
       </Container>

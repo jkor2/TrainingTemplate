@@ -90,7 +90,7 @@ const AdditionalContentPage = () => {
               '&:hover': { backgroundColor: '#029241' },
             }}
           >
-            Next
+            Quick Links
           </Button>
         </Box>
       </Container>

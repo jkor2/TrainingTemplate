@@ -3,6 +3,7 @@ import { Box, Container, Typography, Button, IconButton, Tooltip } from '@mui/ma
 import { useNavigate } from 'react-router-dom';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 
+
 const Home = () => {
   const navigate = useNavigate();
 
@@ -141,30 +142,70 @@ const Home = () => {
 
         {/* YouTube Icon */}
         <Box sx={{ mt: 6, textAlign: 'center' }}>
-  <Tooltip title="Check out PG-Training">
-    <Button
-      href="https://www.youtube.com/@PG-Training/playlists"
-      target="_blank"
-      rel="noopener noreferrer"
-      startIcon={<YouTubeIcon sx={{ color: 'red' }} />}
-      sx={{
-        backgroundColor: '#fff',
-        color: 'black',
-        textTransform: 'none',
-        fontWeight: 'bold',
-        fontSize: '1rem',
-        px: 2,
-        py: 1,
-        borderRadius: 2,
-        '&:hover': {
-          backgroundColor: '#ddd',
-        },
-      }}
-    >
-      @PG-Training
-    </Button>
-  </Tooltip>
+  <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2, flexWrap: 'wrap' }}>
+    {/* YouTube Button */}
+    <Tooltip title="Check out PG-Training">
+      <Button
+        href="https://www.youtube.com/@PG-Training/playlists"
+        target="_blank"
+        rel="noopener noreferrer"
+        startIcon={<YouTubeIcon sx={{ color: 'red' }} />}
+        sx={{
+          backgroundColor: '#fff',
+          color: 'black',
+          textTransform: 'none',
+          fontWeight: 'bold',
+          fontSize: '1rem',
+          px: 2,
+          py: 1,
+          borderRadius: 2,
+          '&:hover': {
+            backgroundColor: '#ddd',
+          },
+        }}
+      >
+        YouTube Video Playlist
+      </Button>
+    </Tooltip>
+
+    {/* Google Slides Button */}
+    <Tooltip title="Open Google Slides Training">
+      <Button
+        href="https://docs.google.com/presentation/d/1BxASsD5hNYdDeXwPydeglQuqZBg8iMmvUOO9yDER0Lw/edit?usp=sharing"
+        target="_blank"
+        rel="noopener noreferrer"
+        startIcon={
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 0 48 48"
+            width="24"
+          >
+            <path fill="#fbbc04" d="M6 10a4 4 0 0 1 4-4h28a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4V10z"/>
+            <path fill="#fff" d="M14 16h20v16H14z"/>
+            <path fill="#fbbc04" d="M18 20h12v8H18z"/>
+          </svg>
+        }
+        sx={{
+          backgroundColor: '#fff',
+          color: 'black',
+          textTransform: 'none',
+          fontWeight: 'bold',
+          fontSize: '1rem',
+          px: 2,
+          py: 1,
+          borderRadius: 2,
+          '&:hover': {
+            backgroundColor: '#ddd',
+          },
+        }}
+      >
+        Google Slide Version
+      </Button>
+    </Tooltip>
+  </Box>
 </Box>
+
 
       </Container>
     </Box>

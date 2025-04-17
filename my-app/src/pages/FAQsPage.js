@@ -122,7 +122,7 @@ const FAQsPage = () => {
               '&:hover': { backgroundColor: '#029241' },
             }}
           >
-            Previous
+            SOP's
           </Button>
 
           <Button
