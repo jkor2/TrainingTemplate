@@ -150,8 +150,7 @@ const VideoPage = () => {
           >
             Previous
           </Button>
-
-          <Box sx={{ display: 'flex', justifyContent: 'center', flex: 1 }}>
+          {video.id == 1 ? "" :           <Box sx={{ display: 'flex', justifyContent: 'center', flex: 1 }}>
             <Button
               component={Link}
               to="/overview"
@@ -169,7 +168,8 @@ const VideoPage = () => {
             >
               Back to Overview
             </Button>
-          </Box>
+          </Box>}
+
 
           <Button
             variant="contained"

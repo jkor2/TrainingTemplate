@@ -242,7 +242,7 @@ const Overview = () => {
               color: '#fff',
               textTransform: 'none',
               height: '50px',
-              width: '120px',
+              width: '300px',
               '&:hover': {
                 backgroundColor: '#029241',
               },
@@ -257,7 +257,7 @@ const Overview = () => {
               color: '#fff',
               textTransform: 'none',
               height: '50px',
-              width: '120px',
+              width: '300px',
               '&:hover': {
                 backgroundColor: '#029241',
               },
