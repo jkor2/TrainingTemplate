@@ -21,26 +21,26 @@ const videoData = [
     {
       id: 4,
       title: 'DiamondKast - Scoring How To - 1',
-      description: "This DiamondKast Training video covers ground out double plays, line drive double plays with a man doubled off first, and flyball double plays where a runner is thrown out at home.",
+      description: "This DiamondKast Training video covers how to record pitches, strikeouts, walks, batted outs, singles, and extra-base hits.",
       youtubeId: 'XxC3TfRM3FU'
     },
     {
       id: 5,
       title: 'DiamondKast - Scoring How To - 2',
-      description: "This DiamondKast Training video covers how to record pitches, strikeouts, walks, batted outs, singles, and extra-base hits.",
+      description: "This DiamondKast Training video covers ground out double plays, line drive double plays with a man doubled off first, and flyball double plays where a runner is thrown out at home.",
       youtubeId: 'QyRUe8qLvtI'
     },
     {
       id: 6,
       title: 'DiamondKast - Scoring How To - 3',
       description: "This DiamondKast Training video covers various game situations, including fielder's choices, batters reaching on error, stolen bases, caught stealing, pickoffs, wild pitches, and passed balls.",
-      youtubeId: '7hqWrLly-74'
+      youtubeId: 'Tvcj8l4uVyg'
     },
     {
         id: 7,
         title: 'DiamondKast - Scoring How To - 4',
         description: "This DiamondKast Training video covers various scoring scenarios, including advances on throws, advances on errors, assigning multiple errors, base hit with runner out, sacrifice bunts, sacrifice fly outs, and recording a balk.",
-        youtubeId: 'aIBLGnKq3gY'
+        youtubeId: 'e0rzdzO1hSE'
       },
       {
         id: 8,
