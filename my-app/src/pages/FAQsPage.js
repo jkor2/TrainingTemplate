@@ -27,7 +27,7 @@ const faqData = [
   },
   {
     question: 'Do I need to bring my own equipment?',
-    answer: 'No, all the equipment needed to perform the roles of a Field Manager will be provided.'
+    answer: 'No, all the equipment needed to perform the functions of a Field Manager will be provided.'
   },
   {
     question: 'What should I bring?',
