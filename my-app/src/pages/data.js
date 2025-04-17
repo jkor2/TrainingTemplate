@@ -51,8 +51,8 @@ const videoData = [
       {
         id: 9,
         title: 'DiamondKast - Deadball Plays',
-        description: "Under Maintence",
-        youtubeId: 'Under Maintence'
+        description: "This DiamondKast Training video covers dead ball plays, focusing on situations when the batter is either on or out. Topics include catcher's interference, umpire's interference, interference on the way to first base, hit by the batter's own batted ball, batter interference, and the infield fly rule. Learn the proper procedures and rules for handling these unique scenarios on the field.",
+        youtubeId: 'WrWwzmaeqqs'
       },
       {
         id: 10,
