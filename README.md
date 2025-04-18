@@ -4,6 +4,8 @@ Demo of the template filled out - https://fieldmanagertraining.vercel.app/
 
 clone & install modules
 
+JavaScript | React | Material UI
+
 **Features**
 - Embeded YouTube Videos and dynamically render them.
 - Quick Links - Include quick resources the trainee would need. 
