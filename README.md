@@ -1,11 +1,10 @@
-**Field Manager Training**
+**Template Training Front End Site**
 <br/>
-Demo - https://fieldmanagertraining.vercel.app/
+Demo of the template filled out - https://fieldmanagertraining.vercel.app/
 
 **Features**
-- 18 Embeded Comprhensive YouTube Videos (DiamondKast, Pitch Types, Livestreams/Stream Boxes, Stalker Radar, Stat Corrections, WheniWork, DiamondKast Academy)
-- Embeded Google Slides Prsentantion to act as supplemntary content. (Containts verious plays/scenarios from previous training)
-- Quick Links essential for the Field Manager Postion (DiamondKast Academy, Regional Event Page, Rules)
-- Standard Operating Procedures (SOP's)
-- Frequently Asked Questions  (FAQ's)
+- Embeded YouTube Videos and dynamically render them.
+- Quick Links - Include quick resources the trainee would need. 
+- Standard Operating Procedures (SOP's) - Include SOPs the trainee would neeed.
+- Frequently Asked Questions  (FAQ's) - Include FAQs the trainee would need.
 - Keyword seachable overview page for quick access to locating material.
