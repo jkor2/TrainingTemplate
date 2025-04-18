@@ -134,7 +134,7 @@ const FAQsPage = () => {
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon sx={{ color: "#00b34f" }} />}
               >
-                <Typography sx={{ fontWeight: "bold", color: "#00b34f" }}>
+                <Typography sx={{ fontWeight: "bold", color: "#d0cfcd" }}>
                   {faq.question}
                 </Typography>
               </AccordionSummary>

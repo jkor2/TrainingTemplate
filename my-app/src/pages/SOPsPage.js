@@ -157,7 +157,7 @@ const SOPsPage = () => {
                   sx={{
                     fontWeight: "bold",
                     fontSize: "18px",
-                    color: "#00b34f",
+                    color: "#d0cfcd",
                   }}
                 >
                   {sop.label}

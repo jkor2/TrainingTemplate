@@ -86,7 +86,7 @@ const Home = () => {
             variant="contained"
             onClick={() => navigate("/quicklinks")}
             sx={{
-              backgroundColor: "#adadb0",
+              backgroundColor: "#005cb9",
               color: "#fff",
               textTransform: "none",
               height: "50px",
@@ -96,7 +96,7 @@ const Home = () => {
               },
               maxWidth: "360px",
               "&:hover": {
-                backgroundColor: "#656769",
+                backgroundColor: "#014891",
               },
             }}
           >
@@ -107,7 +107,7 @@ const Home = () => {
             variant="contained"
             onClick={() => navigate("/sops")}
             sx={{
-              backgroundColor: "#adadb0",
+              backgroundColor: "#005cb9",
               color: "#fff",
               textTransform: "none",
               height: "50px",
@@ -117,7 +117,7 @@ const Home = () => {
               },
               maxWidth: "360px",
               "&:hover": {
-                backgroundColor: "#656769",
+                backgroundColor: "#014891",
               },
             }}
           >
@@ -128,7 +128,7 @@ const Home = () => {
             variant="contained"
             onClick={() => navigate("/faqs")}
             sx={{
-              backgroundColor: "#adadb0",
+              backgroundColor: "#005cb9",
               color: "#fff",
               textTransform: "none",
               height: "50px",
@@ -138,7 +138,7 @@ const Home = () => {
               },
               maxWidth: "360px",
               "&:hover": {
-                backgroundColor: "#656769",
+                backgroundColor: "#014891",
               },
             }}
           >
