@@ -16,7 +16,7 @@ import {
 import SearchIcon from "@mui/icons-material/Search";
 import CloseIcon from "@mui/icons-material/Close";
 import { useNavigate } from "react-router-dom";
-import videoData from "./data";
+import { videoData } from "./data";
 
 const Overview = () => {
   const navigate = useNavigate();

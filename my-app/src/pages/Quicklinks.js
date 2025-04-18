@@ -10,51 +10,7 @@ import {
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import pgLogo from "./images/pglogo.png";
-
-const quickLinks = [
-  {
-    label: "Perfect Game Events by Region",
-    href: "https://www.perfectgame.org/Schedule/FeaturedGroups.aspx?PrtID=270",
-    description:
-      "Bring up the all events broken into their region, for quickly navigating to your event.",
-  },
-  {
-    label: "DiamondKast Academy",
-    href: "https://www.diamondkast.com/tutorials?section=welcome-slides",
-    description:
-      "Bring up the learn to score page, quickly search for a specific play to score.",
-  },
-  {
-    label: "High School Rules",
-    href: "https://docs.google.com/document/d/1xFVPjM3KSPNtGsmTMIe8ssc1TIwIBVmVKMysMAudpUk/edit?usp=sharing",
-    description:
-      "View the current High School rules for a Perfect Game event. Updated 4/15/2025.",
-  },
-  {
-    label: "Youth Rules",
-    href: "https://docs.google.com/document/d/1MYL_yzVFmDszPofIK6E9f8h3iz2ZmruPz00nFP_aU-E/edit?usp=sharing",
-    description:
-      "View the current Youth rules for a Perfect Game event. Updated 4/15/2025.",
-  },
-  {
-    label: "High School Pitching Rules",
-    href: "https://docs.google.com/document/d/1adUCoicH3_xET9nrceuTZv-FV-cPRz--t9nDkkTc7aY/edit?usp=sharing",
-    description:
-      "View the current High School Pitching rules for a Perfect Game event. Updated 4/15/2025.",
-  },
-  {
-    label: "Youth Pitching Rules",
-    href: "https://docs.google.com/document/d/1qdzg-k43krilbtOdBDoHB82jGiubtrYeNctHETPA2IE/edit?usp=sharing",
-    description:
-      "View the current Youth Pitching rules for a Perfect Game event. Updated 4/15/2025.",
-  },
-  {
-    label: "PG-Training Field Manager Playlist",
-    href: "https://www.youtube.com/watch?v=BYNCsdumpI8&list=PLv9RWYSrjeRyKgNnCUTpW9QNixw55wfht",
-    description: "View all the videos on our Youtube Playlist.",
-  },
-  // Add more as needed
-];
+import { quickLinks } from "./data";
 
 const QuickLinksPage = () => {
   const navigate = useNavigate();

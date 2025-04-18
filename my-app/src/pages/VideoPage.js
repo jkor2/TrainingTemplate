@@ -9,7 +9,7 @@ import {
   CircularProgress,
 } from "@mui/material";
 import { Link } from "react-router-dom";
-import videoData from "./data";
+import { videoData } from "./data";
 import pgLogo from "./images/pglogo.png";
 import beforeImage from "./images/before.jpeg";
 import afterImage from "./images/after.jpeg";

@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import pgLogo from "./images/pglogo.png";
-import videoData from "./data";
+import { videoData } from "./data";
 
 const AdditionalContentPage = () => {
   const navigate = useNavigate();

@@ -15,7 +15,7 @@ const FeedbackPage = () => {
 
   // Function to handle the onLoad event for the iframe
   const handleIframeLoad = () => {
-    setLoading(false); 
+    setLoading(false);
   };
 
   return (
