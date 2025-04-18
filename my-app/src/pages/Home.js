@@ -41,7 +41,7 @@ const Home = () => {
 
         {/* Welcome Text */}
         <Typography variant="h3" align="center" gutterBottom>
-          Field Manager Training
+          [Insert Training Name]
         </Typography>
 
         {/* Start Training Button */}
@@ -157,9 +157,9 @@ const Home = () => {
             }}
           >
             {/* YouTube Button */}
-            <Tooltip title="Check out PG-Training">
+            <Tooltip title="Link YT Rescources">
               <Button
-                href="https://www.youtube.com/@PG-Training/playlists"
+                href="https://www.youtube.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 startIcon={<YouTubeIcon sx={{ color: "red" }} />}
@@ -177,14 +177,14 @@ const Home = () => {
                   },
                 }}
               >
-                Youtube Scoring Playlist
+                Link YT Resources
               </Button>
             </Tooltip>
 
             {/* Google Slides Button */}
-            <Tooltip title="Open Google Slides Training">
+            <Tooltip title="Link Slides Resources">
               <Button
-                href="https://docs.google.com/presentation/d/1BxASsD5hNYdDeXwPydeglQuqZBg8iMmvUOO9yDER0Lw/edit?usp=sharing"
+                href="https://docs.google.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 startIcon={
@@ -216,7 +216,7 @@ const Home = () => {
                   },
                 }}
               >
-                Google Slides Training
+                Link Slides Resources
               </Button>
             </Tooltip>
           </Box>

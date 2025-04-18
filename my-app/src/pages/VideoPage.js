@@ -288,7 +288,7 @@ const VideoPage = () => {
           <Button
             variant="contained"
             onClick={() => {
-              if (video.id === videoData.length) navigate("/additional");
+              if (video.id === videoData.length) navigate("/quicklinks");
               else navigate(`/video/${video.id + 1}`);
             }}
             sx={{
@@ -300,7 +300,7 @@ const VideoPage = () => {
               "&:hover": { backgroundColor: "#029241" },
             }}
           >
-            {video.id === videoData.length ? "Supplementary Videos" : "Next"}
+            {video.id === videoData.length ? "Quick Links" : "Next"}
           </Button>
         </Box>
       </Container>
